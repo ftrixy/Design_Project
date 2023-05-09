@@ -1,0 +1,43 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-size: 24px;
+    color: $accent;
+    line-height: 29px;
+    @extend %inter-400;
+    display: flex;
+    flex-direction: column;
+    background-color: $default;
+    // background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.container {
+    max-width: 1512px;
+    margin: 0 auto;
+    padding: 0 180px;
+    min-height: 100%;
+    position: relative;
+}
+
+.footer {
+    min-width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+:-ms-input-placeholder {
+    color: #fff;
+}
+::-ms-input-placeholder {
+    color: #fff;
+}
