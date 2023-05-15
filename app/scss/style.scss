@@ -17,6 +17,9 @@
         justify-content: space-between;
         align-items: center;
     }
+    &__logo {
+        margin-top: 5px;
+    }
     &__logo svg {
         fill: #fff;
         width: 40px;
@@ -24,9 +27,6 @@
     }
     &__menu-list {
         display: flex;
-    }
-    &__menu-item {
-        margin-bottom: 10px;
     }
     &__menu-link {
         display: inline-block;
@@ -40,10 +40,10 @@
         display: block;
         width: 0;
         height: 2px;
-        background: $accent;
+        background-color: $accent;
         transition: width 0.3s;
     }
-    &__menu-link:hover::after {
+    &__menu-link:hover::after { 
         width: 100%;
         transition: width 0.3s;
     }

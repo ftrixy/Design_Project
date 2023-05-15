@@ -16,12 +16,26 @@
             margin-top: 270px;
             display: flex;
             flex-direction: column;
-            transform: translateY(-300px);
-            transition: all 0.5s;
+            
+
         }
-        
         &__menu-list {
+            position: absolute;
+            z-index: 5;
+            background-color: $default;
             flex-direction: column;
+            align-items: center;
+            top: -90px;
+            left: -100px;
+            right: 0;
+            bottom: 0;
+            height: 100vh;
+            transform: translateY(-400px);
+            transition: transform 0.3s ease;
+            overflow: auto;
+        }
+        &__menu-item {
+            margin-bottom: 30px;
         }
         &__menu-link {
             margin-left: 5px;
@@ -31,6 +45,8 @@
             position: relative;
             width: 30px;
             height: 20px;
+            z-index: 10;
+            cursor: pointer;
         }
         &__burger span {
             position: absolute;
@@ -39,6 +55,7 @@
             height: 2px;
             left: 0;
             top: 9px;
+            transition: all .3s ease;
         }
         &__burger::before,
         &__burger::after {
@@ -47,6 +64,7 @@
             position: absolute;
             width: 100%;
             height: 2px;
+            transition: all .3s ease;
         }
         &__burger::before {
             top: 0;
@@ -55,8 +73,23 @@
             bottom: 0;
         }
     }
-}
-.header__menu.header__menu--active {
-    transform: translateY(0);
-    z-index: -10;
+    .header__menu-list.header__menu-list--active {
+        transform: translateY(0);
+        transition: transform 0.3s ease;
+    }
+    .header__burger.header__burger--active::before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .header__burger.header__burger--active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .header__burger.header__burger--active span {
+        display: none;
+    }
+    body.body--active{
+        overflow: hidden;
+    }
+    
 }
