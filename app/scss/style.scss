@@ -6,31 +6,36 @@
 // <------------- HEADER ------------->
 
 .header {
-    padding: 80px 0;
+    padding: 20px 0;
+    background-color: $default;
+
+    &__burger{
+        display: none;
+    }
     &__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    &__inner-logo svg {
+    &__logo svg {
         fill: #fff;
         width: 40px;
         height: 40px;
     }
-    &__inner-list {
+    &__menu-list {
         display: flex;
     }
-    &__inner-list-item {
+    &__menu-item {
         margin-bottom: 10px;
     }
-    &__inner-link {
+    &__menu-link {
         display: inline-block;
         color: $accent;
         margin-left: 55px;
         text-transform: uppercase;
         text-decoration: none;
     }
-    &__inner-link::after {
+    &__menu-link::after {
         content: " ";
         display: block;
         width: 0;
@@ -38,7 +43,7 @@
         background: $accent;
         transition: width 0.3s;
     }
-    &__inner-link:hover::after {
+    &__menu-link:hover::after {
         width: 100%;
         transition: width 0.3s;
     }
@@ -47,7 +52,7 @@
 // <------------- PROMO ------------->
 
 .promo {
-    padding: 60px 0;
+    padding: 220px 0 220px;
 
     &__inner {
         position: relative;
@@ -101,7 +106,7 @@
 // <------------- PORTFOLIO ------------->
 
 .portfolio {
-    padding: 220px 0;
+    padding-bottom: 220px;
     &__title {
         font-size: 80px;
         line-height: 100px;
@@ -237,7 +242,7 @@
         background-color: $accent;
         border: 2px solid $default;
         transform: scale(1.1);
-        transition: all 0.5s;
+        // transition: all 0.5s;
     }
 }
 
@@ -339,8 +344,35 @@
         color: $accent;
         background-color: $default;
         border: 2px solid $accent;
-        transition: all 0.5s;
+        // transition: all 0.5s;
         transform: scale(1.1);
+    }
+}
+
+
+// <------------- FOOTER ------------->
+
+.footer{
+    padding: 75px 0;
+    &__title{
+        text-align: center;
+        font-size: 22px;
+        line-height: 26px;
+        @extend %inter-700;
+        margin-bottom: 25px;
+    }
+    &__info{
+        text-align: center;
+        font-size: 22px;
+        line-height: 26px;
+        @extend %inter-300;
+    }
+    &__info a{
+        color: $accent;
+        
+    }
+    &__info-policy{
+        margin-right: 35px;
     }
 }
 
