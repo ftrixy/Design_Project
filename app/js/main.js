@@ -27,6 +27,9 @@ menuBtn.addEventListener('click', () => {
     menuBtn.classList.toggle('header__burger--active');
     body.classList.toggle('body--lock');
 });
+menu.addEventListener('click', () => {
+    menu.classList.remove('header__menu-list--active');
+});
 
 
 
