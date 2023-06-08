@@ -29,6 +29,8 @@ menuBtn.addEventListener('click', () => {
 });
 menu.addEventListener('click', () => {
     menu.classList.remove('header__menu-list--active');
+    menuBtn.classList.remove('header__burger--active');
+    body.classList.remove('body--lock');
 });
 
 
